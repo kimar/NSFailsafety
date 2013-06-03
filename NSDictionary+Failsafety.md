@@ -1,15 +1,37 @@
-NSFailsafety
-============
+NSDictionary-Failsafety
+=======================
 
-Some categories to make your Cocoa-Life a bit easier (and, in case, keep your code clean).
+A category on NSDictionary for returning "failsafe" values for keys.
 
-Check out the seperate README files:
+```
+/**
+ Return String for Key, if null return emtpy String
+ @param key The desired key
+ @returns A String
+ */
+- (NSString *) failsafeStringForKey:(NSString *)key;
 
-#### [NSDictionary+Failsafety](https://github.com/kimar/NSFailsafety/blob/master/NSDictionary+Failsafety.md)
+/**
+ Return Array for Key, if null return empty Array
+ @param key The desired key
+ @retuns An Array
+ */
+- (NSArray *) failsafeArrayForKey:(NSString *)key;
 
-#### [NSUserDefaults+Failsafety](https://github.com/kimar/NSFailsafety/blob/master/NSUserDefaults+Failsafety.md)
+/**
+ Return Dictionary for Key, if null return empty Dictionary
+ @param key The desired key
+ @return A Dictionary
+ */
+- (NSDictionary *) failsafeDictionaryForKey:(NSString *)key;
 
----
+/**
+ Return Double for Key, if null return 0.0
+ @param key The desired key
+ @return A Double
+ */
+- (double) failsafeDoubleForKey:(NSString *)key;
+```
 
 The MIT License (MIT)
 
